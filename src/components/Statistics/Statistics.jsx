@@ -8,7 +8,7 @@ import {
   Percentage,
 } from './Statistics.styled';
 
-export const Statistics = ({ title, stats }) => (
+export const Statistics = ({ title, stats = [] }) => (
   <Section>
     {title && <Title>{title}</Title>}
 
