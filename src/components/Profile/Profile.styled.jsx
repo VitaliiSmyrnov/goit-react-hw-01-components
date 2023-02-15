@@ -1,58 +1,60 @@
 import styled from 'styled-components';
 
 export const UserCard = styled.div`
-  text-align: center;
-  background-color: #fff;
+  margin-top: ${p => p.theme.spacing(7)};
+  margin-bottom: ${p => p.theme.spacing(15)};
   width: 450px;
-  margin-top: 30px;
-  margin-bottom: 100px;
+  text-align: center;
+
+  background-color: ${p => p.theme.colors.white};
   border-radius: ${p => p.theme.radii.md};
   box-shadow: ${p => p.theme.shadows.normal};
+  overflow: hidden;
 `;
 
 export const UserHeading = styled.div`
-  padding: 50px;
+  padding: ${p => p.theme.spacing(12)};
 `;
 
 export const UserImg = styled.img`
-  display: block;
   margin-left: auto;
   margin-right: auto;
-  border-radius: ${p => p.theme.radii.round};
-  border: ${p => p.theme.borders.normal} ${p => p.theme.colors.border};
   width: 200px;
   height: auto;
+
+  border-radius: ${p => p.theme.radii.round};
+  border: ${p => p.theme.borders.normal} ${p => p.theme.colors.border};
 `;
 
 export const UserName = styled.p`
-  font-size: ${p => p.theme.fontSizes[5]}px;
+  margin-top: ${p => p.theme.spacing(8)};
+  margin-bottom: ${p => p.theme.spacing(4)};
+
+  font-size: ${p => p.theme.fontSizes.lg};
   font-weight: ${p => p.theme.fontWeights.bold};
-  margin-top: ${p => p.theme.space[4]}px;
-  margin-bottom: ${p => p.theme.space[3]}px;
 `;
 
 export const UserTag = styled.p`
-  font-size: ${p => p.theme.fontSizes[3]}px;
+  margin-bottom: ${p => p.theme.spacing(4)};
+
+  font-size: ${p => p.theme.fontSizes.md};
   font-weight: ${p => p.theme.fontWeights.body};
+
   color: ${p => p.theme.colors.lightText};
-  margin-top: ${p => p.theme.space[0]};
-  margin-bottom: ${p => p.theme.space[3]}px;
 `;
 
 export const UserLocation = styled.p`
-  font-size: ${p => p.theme.fontSizes[3]}px;
+  font-size: ${p => p.theme.fontSizes.md};
   font-weight: ${p => p.theme.fontWeights.body};
+
   color: ${p => p.theme.colors.lightText};
-  margin-top: ${p => p.theme.space[0]};
-  margin-bottom: ${p => p.theme.space[0]};
 `;
 
 export const StatsList = styled.ul`
   display: flex;
   justify-content: space-between;
-  background-color: #e3e3e3;
-  margin: ${p => p.theme.space[0]};
-  padding: ${p => p.theme.space[0]};
+
+  background-color: ${p => p.theme.colors.backgroundLight};
   border-top: ${p => p.theme.borders.normal} ${p => p.theme.colors.border};
   border-bottom-left-radius: ${p => p.theme.radii.md};
   border-bottom-right-radius: ${p => p.theme.radii.md};
@@ -61,20 +63,23 @@ export const StatsList = styled.ul`
 export const StatsItem = styled.li`
   display: flex;
   flex-direction: column;
-  margin: ${p => p.theme.space[0]};
-  padding: ${p => p.theme.space[3]}px ${p => p.theme.space[0]}px;
+
+  margin: 0;
+  padding: ${p => p.theme.spacing(4)} 0px;
   width: 150px;
+
   &:not(:last-child) {
     border-right: ${p => p.theme.borders.normal} ${p => p.theme.colors.border};
   }
 `;
 
 export const Label = styled.span`
+  margin-bottom: ${p => p.theme.spacing(1)};
+
   color: ${p => p.theme.colors.lightText};
-  margin-bottom: ${p => p.theme.space[1]}px;
 `;
 
 export const Quantity = styled.span`
+  font-size: ${p => p.theme.fontSizes.md};
   font-weight: ${p => p.theme.fontWeights.bold};
-  font-size: ${p => p.theme.fontSizes[4]}px;
 `;

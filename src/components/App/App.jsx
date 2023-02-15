@@ -1,5 +1,9 @@
-import { FriendList, Profile, Statistics } from 'components';
-import { TransactionHistory } from 'components/TransactionHistory/TransactionHistory';
+import {
+  FriendList,
+  Profile,
+  Statistics,
+  TransactionHistory,
+} from 'components';
 import { user, data, friends, transactions } from 'db/index';
 import { Wrapper } from './App.styled';
 

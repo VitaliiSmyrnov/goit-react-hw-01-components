@@ -1,33 +1,42 @@
 import styled from 'styled-components';
 
 export const Table = styled.table`
-  font-size: ${p => p.theme.fontSizes[4]}px;
-  border-collapse: collapse;
+  margin-top: ${p => p.theme.spacing(15)};
+  margin-bottom: ${p => p.theme.spacing(7)};
   text-align: center;
-  margin-top: ${p => p.theme.space[6]}px;
-  margin-bottom: ${p => p.theme.space[5]}px;
+
+  font-size: ${p => p.theme.fontSizes.md};
+
+  border-collapse: collapse;
   box-shadow: ${p => p.theme.shadows.normal};
 `;
+
 export const TH = styled.th`
-  background: #afcde7;
-  color: ${p => p.theme.colors.white};
+  min-width: 200px;
   line-height: ${p => p.theme.lineHeights.table};
+
+  color: ${p => p.theme.colors.white};
+  background: #afcde7;
+
   border-style: solid;
   border-width: 0 1px 1px 0;
   border-color: ${p => p.theme.colors.border};
-  min-width: 200px;
 `;
+
 export const TD = styled.td`
+  line-height: ${p => p.theme.lineHeights.table};
+
   background: #d8e6f3;
   border-style: solid;
   border-width: 0 1px 1px 0;
   border-color: ${p => p.theme.colors.border};
-  line-height: ${p => p.theme.lineHeights.table};
+
   &:first-child {
     text-align: left;
-    padding-left: ${p => p.theme.space[4]}px;
+    padding-left: ${p => p.theme.spacing(8)};
   }
 `;
+
 export const TR = styled.tr`
   &:hover,
   &:focus {

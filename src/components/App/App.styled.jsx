@@ -7,7 +7,6 @@ export const Wrapper = styled.div`
   align-items: center;
 
   height: 100%;
-  font-size: 16px;
 
   color: ${p => p.theme.colors.text};
   background-color: ${p => p.theme.colors.background};

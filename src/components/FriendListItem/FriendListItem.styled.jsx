@@ -3,39 +3,47 @@ import styled from 'styled-components';
 export const Item = styled.li`
   display: flex;
   align-items: center;
-  list-style-type: none;
-  min-width: 250px;
-  padding: ${p => p.theme.space[3]}px;
 
-  background-color: ${p => p.theme.colors.white};
+  min-width: 250px;
+  padding: ${p => p.theme.spacing(4)};
+
   color: ${p => p.theme.colors.text};
-  cursor: pointer;
+  background-color: ${p => p.theme.colors.white};
   box-shadow: ${p => p.theme.shadows.normal};
+  cursor: pointer;
+
   &:hover,
   &:focus {
     scale: 1.05;
   }
   transition: scale ${p => p.theme.transitions.normal};
+
   &:not(:last-child) {
-    margin-bottom: ${p => p.theme.space[3]}px;
+    margin-bottom: ${p => p.theme.spacing(4)};
   }
 `;
+
 export const Status = styled.span`
   display: block;
-  width: ${p => p.theme.fontSizes[2]}px;
-  height: ${p => p.theme.fontSizes[2]}px;
+  width: ${p => p.theme.spacing(4)};
+  height: ${p => p.theme.spacing(4)};
+  margin-right: ${p => p.theme.spacing(4)};
+
   border-radius: ${p => p.theme.radii.round};
+
   background-color: ${props => (props.isOnline ? 'green' : 'red')};
-  margin-right: ${p => p.theme.space[3]}px;
 `;
+
 export const UserImg = styled.img`
-  display: block;
-  border-radius: ${p => p.theme.radii.normal};
+  margin-right: ${p => p.theme.spacing(4)};
+
   border: ${p => p.theme.borders.normal} ${p => p.theme.colors.border};
-  margin-right: ${p => p.theme.space[3]}px;
+  border-radius: ${p => p.theme.radii.normal};
 `;
+
 export const UserName = styled.p`
-  font-size: ${p => p.theme.fontSizes[4]}px;
+  font-size: ${p => p.theme.fontSizes.md};
   font-weight: ${p => p.theme.fontWeights.bold};
+
   color: ${p => p.theme.colors.text};
 `;
